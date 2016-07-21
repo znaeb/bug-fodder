@@ -149,7 +149,7 @@ public class Sieve {
 	    } 
 	    ptr++;
 	}
-	// Debug-print the behind the scenes sieve values
+	// Debug-print the behind the scenes Sieve values
 	// printsieve(results, prime);
 	results = convertResults(results, prime);
 	return results;
@@ -157,7 +157,7 @@ public class Sieve {
 
     /**
      * Generates our "off-by-one" array which will be all numbers
-     * that we calculate for the sieve.	 That is, the zeroth element
+ that we calculate for the Sieve.	 That is, the zeroth element
      * will contain the value 1, element 1 will contain the value 2,
      * etc.
      * @param maxSize - the size of the array to return
@@ -201,18 +201,18 @@ public class Sieve {
     
     /**
      * Main method.  Accepts one argument, which should be parseable
-     * as an integer, ignores any other arguments.  This argument is
-     * the maximum value to calculate for the sieve.
-     * If no argument is provided, or it cannot be parsed, assume
-     * the user meant 100.
-     * @param args maximum value for sieve as first arg
+ as an integer, ignores any other arguments.  This argument is
+ the maximum value to calculate for the Sieve.
+ If no argument is provided, or it cannot be parsed, assume
+ the user meant 100.
+     * @param args maximum value for Sieve as first arg
      */
     
     public static void main(String[] args) {
 	System.out.println("Sieve of Eratosthenes");
 
 	// Get the passed-in argument of the maximum value for
-	// the sieve to calculate the primality of.
+	// the Sieve to calculate the primality of.
 
 	// If the user did not enter any arguments, or the argument
 	// is not a positive integer (1 or greater), then the
@@ -228,7 +228,7 @@ public class Sieve {
 	    _max = 100;
 	}
 	
-	// Calculate sieve and print it out
+	// Calculate Sieve and print it out
 	int[] sieve = generateSieve(_max);
 	int[] results = calculateSieve(sieve);
 	printSieve(results);
