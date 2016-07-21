@@ -5,7 +5,7 @@ public class Sieve {
     private static int _max = 0;
 
     /**
-     * "Debug" version of PrintSieve.  This will show all numbers
+     * "Debug" version of printSieve.  This will show all numbers
      * along with their T/F mark of primality.
      * @param results - list of ints from 1 to n
      * @param prime - boolean array indicating primality
@@ -34,19 +34,20 @@ public class Sieve {
      * @param results array of ints to print out
      */
     
-    public static void PrintSieve(int[] results) {
+    public static void printSieve(int[] results) {
 
 	// As long as there are elements in the array,
 	// print it.  Otherwise, print "BLANK".
-	
-	if (results.length == 0 || results != null) {
+	if(results == null){
+            System.out.println("BLANK");
+        }else if (results.length == 0) {
+            System.out.println("BLANK");
+        }else{
 	    System.out.print("> ");
 	    for (int j = 1; j < results.length;) {
 		System.out.print(results[j] + " ");
 		j++;
 	    }
-	} else {
-	    System.out.println("BLANK");
 	}
     }
 
@@ -192,7 +193,7 @@ public class Sieve {
 	}
 	} else {
 	    // User forgot to enter an argument!  
-	    new IllegalArgumentException();
+	    throw new IllegalArgumentException();
 	}
 	return toReturn;
     }
@@ -230,7 +231,7 @@ public class Sieve {
 	// Calculate sieve and print it out
 	int[] sieve = generateSieve(_max);
 	int[] results = calculateSieve(sieve);
-	PrintSieve(results);
+	printSieve(results);
     }
     
 }
