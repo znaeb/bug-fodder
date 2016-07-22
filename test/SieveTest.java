@@ -98,7 +98,7 @@ public class SieveTest {
    * Test of convertResults method, of class Sieve.
    */
   @Test
-  public void generateSieve20() {
+  public void testgenerateSieve20() {
     System.out.println("generateSieve20");
     int maxSize = 20;
     int[] expResult = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
@@ -110,8 +110,22 @@ public class SieveTest {
    * Test of convertResults method, of class Sieve.
    */
   @Test
-  public void generateSieve1() {
+  public void testgenerateSieve1() {
     System.out.println("generateSieve1");
+    int maxSize = 1;
+    int[] expResult = {1};
+    int[] result = Sieve.generateSieve(maxSize);
+    assertArrayEquals(expResult, result);
+  }
+  
+  /**
+   * Test of calculateSieve method, of class Sieve.
+   */
+  @Test
+  public void testCalculateSieve() {
+    System.out.println("calculateSieve");
+    int[] results = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,
+      22,23,24,25,26,27,28,29,30};
     int maxSize = 1;
     int[] expResult = {1};
     int[] result = Sieve.generateSieve(maxSize);
