@@ -51,7 +51,6 @@ public class SieveTest {
     int[] expResult = {2,3,5,7,11,13,17,19};
     int[] result = Sieve.convertResults(results, prime);
     assertArrayEquals(expResult, result);
-    // TODO review the generated test code and remove the default call to fail.
   }
   /**
    * Test of convertResults method, of class Sieve.
@@ -67,8 +66,55 @@ public class SieveTest {
     int[] expResult = {2,3,5,7,11,13,17,19,23,29};
     int[] result = Sieve.convertResults(results, prime);
     assertArrayEquals(expResult, result);
-    // TODO review the generated test code and remove the default call to fail.
+  }
+  
+  /**
+   * Test of convertResults method, of class Sieve.
+   */
+  @Test
+  public void testConvertResults2() {
+    System.out.println("convertResults2");
+    int[] results = {1,2};
+    boolean[] prime = {false,true};
+    int[] expResult = {2};
+    int[] result = Sieve.convertResults(results, prime);
+    assertArrayEquals(expResult, result);
+  }
+  
+  /**
+   * Test of convertResults method, of class Sieve.
+   */
+  @Test
+  public void testConvertResults1() {
+    System.out.println("convertResults2");
+    int[] results = {1};
+    boolean[] prime = {false};
+    int[] expResult = {};
+    int[] result = Sieve.convertResults(results, prime);
+    assertArrayEquals(expResult, result);
+  }
+  
+  /**
+   * Test of convertResults method, of class Sieve.
+   */
+  @Test
+  public void generateSieve20() {
+    System.out.println("generateSieve20");
+    int maxSize = 20;
+    int[] expResult = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
+    int[] result = Sieve.generateSieve(maxSize);
+    assertArrayEquals(expResult, result);
   }
 
-
+  /**
+   * Test of convertResults method, of class Sieve.
+   */
+  @Test
+  public void generateSieve1() {
+    System.out.println("generateSieve1");
+    int maxSize = 1;
+    int[] expResult = {1};
+    int[] result = Sieve.generateSieve(maxSize);
+    assertArrayEquals(expResult, result);
+  }
 }
