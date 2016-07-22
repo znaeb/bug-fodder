@@ -40,7 +40,7 @@ public class SieveTest {
 
 
   /**
-   * Test of convertResults method, of class Sieve.
+   * Test of convertResults method, of class Sieve2.
    */
   @Test
   public void testConvertResults20() {
@@ -53,7 +53,7 @@ public class SieveTest {
     assertArrayEquals(expResult, result);
   }
   /**
-   * Test of convertResults method, of class Sieve.
+   * Test of convertResults method, of class Sieve2.
    */
   @Test
   public void testConvertResults30() {
@@ -69,7 +69,7 @@ public class SieveTest {
   }
   
   /**
-   * Test of convertResults method, of class Sieve.
+   * Test of convertResults method, of class Sieve2.
    */
   @Test
   public void testConvertResults2() {
@@ -82,7 +82,7 @@ public class SieveTest {
   }
   
   /**
-   * Test of convertResults method, of class Sieve.
+   * Test of convertResults method, of class Sieve2.
    */
   @Test
   public void testConvertResults1() {
@@ -95,7 +95,7 @@ public class SieveTest {
   }
   
   /**
-   * Test of convertResults method, of class Sieve.
+   * Test of convertResults method, of class Sieve2.
    */
   @Test
   public void testgenerateSieve20() {
@@ -107,7 +107,7 @@ public class SieveTest {
   }
 
   /**
-   * Test of convertResults method, of class Sieve.
+   * Test of convertResults method, of class Sieve2.
    */
   @Test
   public void testgenerateSieve1() {
@@ -119,7 +119,7 @@ public class SieveTest {
   }
   
   /**
-   * Test of calculateSieve method, of class Sieve.
+   * Test of calculateSieve method, of class Sieve2.
    */
   @Test
   public void testCalculateSieve() {
