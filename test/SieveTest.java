@@ -122,12 +122,25 @@ public class SieveTest {
    * Test of calculateSieve method, of class Sieve.
    */
   @Test
-  public void testCalculateSieve() {
-    System.out.println("calculateSieve");
+  public void testCalculateSieve30() {
+    System.out.println("calculateSieve30");
     int[] results = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,
       22,23,24,25,26,27,28,29,30};
     int maxSize = 1;
-    int[] expResult = {1};
+    int[] expResult = {2,3,5,7,11,13,17,19,23,29};
+    int[] result = Sieve.calculateSieve(results);
+    assertArrayEquals(expResult, result);
+  }
+  
+  /**
+   * Test of calculateSieve method, of class Sieve.
+   */
+  @Test
+  public void testCalculateSieve1() {
+    System.out.println("calculateSieve1");
+    int[] results = {1};
+    int maxSize = 1;
+    int[] expResult = {};
     int[] result = Sieve.calculateSieve(results);
     assertArrayEquals(expResult, result);
   }
