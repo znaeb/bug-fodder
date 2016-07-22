@@ -128,7 +128,7 @@ public class SieveTest {
       22,23,24,25,26,27,28,29,30};
     int maxSize = 1;
     int[] expResult = {1};
-    int[] result = Sieve.generateSieve(maxSize);
+    int[] result = Sieve.calculateSieve(results);
     assertArrayEquals(expResult, result);
   }
 }

@@ -119,8 +119,8 @@ public class Sieve {
     int size = results.length;    
     // At this point, assume all numbers are prime.
     boolean[] prime = getTrueArray(size);
-    if (size>0) {
-      prime[0]=false;
+    if (size > 0) {
+      prime[0] = false;
     }
     while (ptr < Math.sqrt(results.length)) {
       // if this number is marked false, ignore it - all other
