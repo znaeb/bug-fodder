@@ -1,5 +1,10 @@
 import java.util.ArrayList;
 
+/**
+ * @author MIT
+ * @author Bill Laboon
+ * @author Benjamin Nimchinsky.
+ */
 public class Sieve {
   /**
    * max is highest number to be checked if prime.
@@ -12,7 +17,7 @@ public class Sieve {
    * @param results - list of ints from 1 to n
    * @param prime - boolean array indicating primality
    */
-  public static void printSieve(int[] results, boolean[] prime) {
+  public static void printSieve(final int[] results, final boolean[] prime) {
     System.out.print("> ");
     char eerie;
     // Just loop through the array and print the values.
@@ -165,10 +170,7 @@ public class Sieve {
   public static int[] generateSieve(int maxSize) {
     int size = maxSize;
     int[] toReturn = new int[size];
-    for (int j = 0; j <= size; j++) {
-      if (j == 0) {
-        j++;
-      }
+    for (int j = 1; j <= size; j++) {
       toReturn[j - 1] = j;
     }
     return toReturn;    

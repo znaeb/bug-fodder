@@ -86,7 +86,7 @@ public class SieveTest {
    */
   @Test
   public void testConvertResults1() {
-    System.out.println("convertResults2");
+    System.out.println("convertResults1");
     int[] results = {1};
     boolean[] prime = {false};
     int[] expResult = {};
