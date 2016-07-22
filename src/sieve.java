@@ -47,7 +47,7 @@ public class Sieve {
       System.out.println("BLANK");
     } else {
       System.out.print("> ");
-      for (int j = 1; j < results.length;j++) {
+      for (int j = 0; j < results.length;j++) {
         System.out.print(results[j] + " ");
       }
     }
