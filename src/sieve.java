@@ -52,12 +52,12 @@ public class Sieve {
     }
 
     /**
-     * @param s the size of the array to return
+     * @param size the size of the array to return.
      */
     
-    public static boolean[] getTrueArray(int s) {
-	boolean toReturn[] = new boolean[s];
-	for (int j = 0; j < s; j++) {
+    public static boolean[] getTrueArray(int size) {
+	boolean[] toReturn = new boolean[size];
+	for (int j = 0; j < size; j++) {
 	    toReturn[j] = true;
 	}
 	// Return an all-true array.
