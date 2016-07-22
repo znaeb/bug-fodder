@@ -13,7 +13,7 @@ public class Sieve {
     
     public static void printsieve(int[] results, boolean[] prime) {
 	    System.out.print("> ");
-	    char c = ' ';
+	    char aChar = ' ';
 
 	    // Just loop through the array and print the values.
 	    // Put a (T) after each one if it has been marked
@@ -21,8 +21,8 @@ public class Sieve {
 	    // composite (not prime).
 	    
 	    for (int j = 0; j < results.length;) {
-		c = prime[j] ? 'T' : 'F';
-		System.out.print(results[j] + "(" + c + ") ");
+		aChar = prime[j] ? 'T' : 'F';
+		System.out.print(results[j] + "(" + aChar + ") ");
 		j++;
 	    }
 	    System.out.println();
