@@ -47,7 +47,7 @@ public class Sieve {
       System.out.println("BLANK");
     } else {
       System.out.print("> ");
-      for (int j = 1; j < results.length;j++) {
+      for (int j = 0; j < results.length;j++) {
         System.out.print(results[j] + " ");
       }
     }
@@ -116,7 +116,8 @@ public class Sieve {
 
   public static int[] calculateSieve(int[] results) {
     int ptr = 1; // means value 2
-    int size = results.length;    
+    int size = results.length;
+    
     // At this point, assume all numbers are prime.
     boolean[] prime = getTrueArray(size);
     if (size>0)prime[0]=false;
