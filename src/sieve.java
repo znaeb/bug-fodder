@@ -1,8 +1,10 @@
 import java.util.ArrayList;
 
 public class Sieve {
-
-  private static int _max;
+  /**
+   * max is highest number to be checked if prime.
+   */
+  private static int max;
 
   /**
    * "Debug" version of printSieve.  This will show all numbers
@@ -10,7 +12,6 @@ public class Sieve {
    * @param results - list of ints from 1 to n
    * @param prime - boolean array indicating primality
    */
-
   public static void printSieve(int[] results, boolean[] prime) {
     System.out.print("> ");
     char eerie;
@@ -19,10 +20,9 @@ public class Sieve {
     // prime; put a (F) after one if it has  been marked
     // composite (not prime).
 
-    for (int j = 0; j < results.length;) {
+    for (int j = 0; j < results.length;j++) {
       eerie = prime[j] ? 'T' : 'F';
       System.out.print(results[j] + "(" + eerie + ") ");
-      j++;
     }
     System.out.println();
   }
@@ -164,8 +164,8 @@ public class Sieve {
 
   public static int[] generateSieve(int maxSize) {
     int size = maxSize;
-    int[] toReturn = new int[maxSize];
-    for (int j = 0; j <= maxSize; j++) {
+    int[] toReturn = new int[size];
+    for (int j = 0; j <= size; j++) {
       if (j == 0) {
         j++;
       }
@@ -215,15 +215,15 @@ public class Sieve {
     // Other arguments past the first will be ignored.
 
     try {
-      _max = calculateMax(args);
+      max = calculateMax(args);
     } catch (IllegalArgumentException ex) {
       System.out.println("You forgot to enter a valid integer (> 0)!");
       System.out.println("Assuming you meant to type 100...");
-      _max = 100;
+      max = 100;
     }
 
     // Calculate Sieve and print it out
-    final int[] sieve = generateSieve(_max);
+    final int[] sieve = generateSieve(max);
     final int[] results = calculateSieve(sieve);
     Sieve.printSieve(results);
   }
