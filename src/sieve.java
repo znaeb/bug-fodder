@@ -38,11 +38,11 @@ public class Sieve {
 
 	// As long as there are elements in the array,
 	// print it.  Otherwise, print "BLANK".
-	if(results == null){
+	if (results == null) {
             System.out.println("BLANK");
-        }else if (results.length == 0) {
+        } else if (results.length == 0) {
             System.out.println("BLANK");
-        }else{
+        } else {
 	    System.out.print("> ");
 	    for (int j = 1; j < results.length;) {
 		System.out.print(results[j] + " ");
