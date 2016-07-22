@@ -108,7 +108,7 @@ public class Sieve {
 
   /**
    * Given an array of ints, starting at 1, calculate which ones 
-   * are prime using the Sieve2 of Eratosthenes.
+ are prime using the Sieve of Eratosthenes.
    * Uncomment println statements to watch it work.
    * @param results array of ints starting at 1
    * @return int[] array of all prime ints
@@ -153,7 +153,7 @@ public class Sieve {
       } 
       ptr++;
     }
-    // Debug-print the behind the scenes Sieve2 values
+    // Debug-print the behind the scenes Sieve values
     // printSieve(results, prime);
     results = convertResults(results, prime);
     return results;
@@ -161,7 +161,7 @@ public class Sieve {
 
   /**
    * Generates our "off-by-one" array which will be all numbers that we 
-   * calculate for the Sieve2. That is, the zeroth element will contain the
+ calculate for the Sieve. That is, the zeroth element will contain the
    * value 1, element 1 will contain the value 2,
    * etc.
    * @param maxSize - the size of the array to return
@@ -199,17 +199,17 @@ public class Sieve {
 
   /**
    * Main method.  Accepts one argument, which should be able to be parsed 
-   * as an integer, ignores any other arguments.  This argument is 
-   * the maximum value to calculate for the Sieve2.
-   * If no argument is provided, or it cannot be parsed, assume the user meant 100.
-   * @param args maximum value for Sieve2 as first arg
+ as an integer, ignores any other arguments.  This argument is 
+ the maximum value to calculate for the Sieve.
+ If no argument is provided, or it cannot be parsed, assume the user meant 100.
+   * @param args maximum value for Sieve as first arg
    */
 
   public static void main(String[] args) {
     System.out.println("Sieve of Eratosthenes");
 
     // Get the passed-in argument of the maximum value for
-    // the Sieve2 to calculate the primality of.
+    // the Sieve to calculate the primality of.
 
     // If the user did not enter any arguments, or the argument
     // is not a positive integer (1 or greater), then the
@@ -225,7 +225,7 @@ public class Sieve {
       max = 100;
     }
 
-    // Calculate Sieve2 and print it out
+    // Calculate Sieve and print it out
     final int[] sieve = generateSieve(max);
     final int[] results = calculateSieve(sieve);
     Sieve.printSieve(results);
