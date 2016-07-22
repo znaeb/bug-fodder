@@ -13,16 +13,15 @@ public class Sieve {
     
     public static void printsieve(int[] results, boolean[] prime) {
 	    System.out.print("> ");
-	    char aChar = ' ';
-
+	    char eerie = ' ';
 	    // Just loop through the array and print the values.
 	    // Put a (T) after each one if it has been marked
 	    // prime; put a (F) after one if it has  been marked
 	    // composite (not prime).
 	    
 	    for (int j = 0; j < results.length;) {
-		aChar = prime[j] ? 'T' : 'F';
-		System.out.print(results[j] + "(" + aChar + ") ");
+		eerie = prime[j] ? 'T' : 'F';
+		System.out.print(results[j] + "(" + eerie + ") ");
 		j++;
 	    }
 	    System.out.println();
@@ -73,7 +72,7 @@ public class Sieve {
      * @return int[] the prime numbers from 1 to n 
      */
     
-    public static int[] convertResults(int[] results, boolean prime[] ) {
+    public static int[] convertResults(int[] results, boolean[] prime ) {
 
 	// Create an ArrayList.	 If a value is true for primality,
 	// add it to the array list.
@@ -81,7 +80,7 @@ public class Sieve {
 	ArrayList<Integer> actual = new ArrayList<Integer>();
 	for (int j = 0; j < results.length; j++) {
 	    if (prime[j]) {
-		actual.add(new Integer(j + 1));
+		actual.add(Integer.valueOf(j + 1));
 	    }
 	}
 
@@ -189,8 +188,7 @@ public class Sieve {
 	    if (toReturn < 1) {
 		// User did not enter a valid integer
 		throw new IllegalArgumentException();
-	    } else {
-	}
+	    } 
 	} else {
 	    // User forgot to enter an argument!  
 	    throw new IllegalArgumentException();
@@ -222,7 +220,7 @@ public class Sieve {
 	
 	try {
 	    _max = calculateMax(args);
-	} catch (Exception ex) {
+	} catch (IllegalArgumentException ex) {
 	    System.out.println("You forgot to enter a valid integer (> 0)!");
 	    System.out.println("Assuming you meant to type 100...");
 	    _max = 100;
