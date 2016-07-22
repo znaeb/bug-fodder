@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Sieve {
 
-  private static int _max = 0;
+  private static int _max;
 
   /**
    * "Debug" version of printSieve.  This will show all numbers
@@ -223,8 +223,8 @@ public class Sieve {
     }
 
     // Calculate Sieve and print it out
-    int[] sieve = generateSieve(_max);
-    int[] results = calculateSieve(sieve);
+    final int[] sieve = generateSieve(_max);
+    final int[] results = calculateSieve(sieve);
     Sieve.printSieve(results);
   }
 }
