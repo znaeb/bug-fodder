@@ -116,9 +116,10 @@ public class Sieve {
 
   public static int[] calculateSieve(int[] results) {
     int ptr = 1; // means value 2
-    int size = results.length;
+    int size = results.length;    
     // At this point, assume all numbers are prime.
     boolean[] prime = getTrueArray(size);
+    if (size>0)prime[0]=false;
     while (ptr < Math.sqrt(results.length)) {
       // if this number is marked false, ignore it - all other
       // numbers which are multiples of it will also already
